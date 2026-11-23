@@ -1,0 +1,96 @@
+
+body {
+    color: gray;
+    background-color: azure;
+}
+
+h2 {
+    color: aqua;
+}
+
+#recipe-title {
+    color: blueviolet;
+    font-size: 40px;
+}
+
+.highlight {
+    background-color: yellow;
+}
+
+.intro {
+    color: blue;
+    font-size: 20px;
+}
+
+.block {
+    background-color: white;
+    width: 700px;
+    max-width: 100%;
+    box-shadow: 0 2px 8px gray;
+}
+
+#main-image {
+    width: 400px;
+    max-width: 100%;
+    box-shadow: 0 2px 8px gray;
+}
+
+#info-table {
+    width: 100%;
+}
+
+ {
+    w.side-imageidth: 200px;
+    height: 200px;
+    max-width: 100%;
+}
+
+#nav a:hover {
+    color: darkred;
+}
+
+.block:hover {
+    box-shadow: 0 2px 60px gray;
+}
+
+.ingredients-list > li {
+    list-style-type: none;
+}
+
+.ingredients-list > li::before {
+    content: "V ";
+    color: black;
+}
+
+.ingredients-list li:first-child {
+    color: blueviolet;
+}
+
+.steps-list li:last-child {
+    color: aquamarine;
+}
+
+tbody tr:hover {
+    background-color: cadetblue;
+}
+
+h2::before {
+    content: "-";
+    color: palevioletred;
+}
+
+#page-footer p::before {
+    content: "©";
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+}
+
+/*
+A: שימוש במחלקה אחת מאפשר לעצב כמה אזורים יחד.
+
+B: הגדרת רוחב וגובה יחד עלולה למתוח תמונה
+ולשנות את הפרופורציות המקוריות שלה.
+*/
