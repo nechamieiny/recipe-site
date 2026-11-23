@@ -1,0 +1,138 @@
+
+*{
+    box-sizing: border-box;
+}
+body{
+font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f6f8;
+    padding: 1rem;
+}
+form{
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.row {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+label,
+legend {
+    font-weight: bold;
+}
+input:not([type="checkbox"]):not([type="radio"]),
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2e5597;
+}
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: #2e5597;
+}
+button {
+    background-color: #2e5597;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 1rem;
+    min-height: 44px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #1b3d70;
+}
+
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+@media (width >= 700px) {
+    form {
+        padding: 2rem;
+    }
+
+    .row {
+        flex-direction: row;
+    }
+
+    .row .field {
+        flex: 1;
+    }
+    button{width: auto; align-self: center;}
+}
+/* חלק ג
+ 1
+ זה לא נוח מפני שיש לי גלילה ללמטה ולצדדים אינו תואם את הדף,*ובנוסף כשאני מקטינה אז התוכן אינו יורד שורה אלה דורס ועולה אחד על השני.
+ 2
+  השדות עוברים לשורה אחת ברוחב 700px ומעלה 
+ שאלה א
+ההבדל בין name ל-id:
+
+ id – מזהה ייחודי של אלמנט בדף.
+   לכל אלמנט צריך להיות id שונה.
+
+ name – שם השדה, המשמש לזיהויו בעת שליחת הטופס.
+
+ בכפתורי Radio נותנים לכל הכפתורים באותה קבוצת בחירה
+   את אותו name, כדי שהמשתמש יוכל לבחור רק אפשרות אחת
+   מתוך הקבוצה.
+
+   לכל כפתור Radio נותנים id שונה כדי לזהות אותו בנפרד.
+שאלה ב
+
+כתבנו קודם את העיצוב למסך קטן (Mobile First),
+   כי מתחילים מהעיצוב הפשוט ומתאימים אותו בהמשך למסכים גדולים.
+
+ השתמשנו ב-Media Query עם התנאי width >= 700px,
+   כדי להוסיף שינויים בעיצוב כאשר רוחב המסך מגיע ל-700px ומעלה.
+
+ אם היינו כותבים את ה-Media Query לפני הכללים הרגילים,
+   הכללים הרגילים שמופיעים אחריו היו עלולים לדרוס את השינויים
+   שהגדרנו במדיה קוורי, אם הייתה להם אותה רמת חשיבות.
+שאלה ג
+לאחר הלחיצה על כפתור השליחה נוספו לכתובת הדף
+פרמטרים שמכילים את שמות השדות ואת הערכים שלהם.
+
+הדבר מלמד שהתכונה name משמשת לזיהוי השדות
+ולשליחת הנתונים שהמשתמש הזין בטופס.
+
+*/

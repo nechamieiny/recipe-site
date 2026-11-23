@@ -39,12 +39,11 @@ h2 {
     width: 100%;
 }
 
- {
-    w.side-imageidth: 200px;
+.side-image {
+    width: 200px;
     height: 200px;
     max-width: 100%;
 }
-
 #nav a:hover {
     color: darkred;
 }
